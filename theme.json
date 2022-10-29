@@ -1,0 +1,11 @@
+{
+  "label" : "MyTheme",
+  "preview_path" : null,
+  "screenshot_path" : null,
+  "enable_domain_stylesheets" : true,
+  "is_available_for_new_content" : true,
+  "author" : {
+    "name" : "Jenny Hag",
+    "email" : ""
+  }
+}
