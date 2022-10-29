@@ -1,1 +1,54 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    
+        {{ require_css(get_asset_url('/MyTheme/css/layout.css')) }}
 
+    {{ require_css(get_asset_url('/MyTheme/css/my-theme.css')) }}
+    {{ standard_header_includes }}
+
+  </head>
+  <body>
+    {% global_partial path="./partials/header.html" %}
+    
+    {% dnd_area "dnd_area"
+      label="Main section"
+      class="body-container body-container--about"
+    %}
+    
+      {% dnd_section class="body-container" vertical_alignment="TOP" %}
+        
+     {% dnd_module
+  path="@hubspot/image",
+  width=6,
+  img={
+        "max_height": 449,
+        "max_width": 605,
+        "size_type": "auto_custom_max",
+    src:"//cdn2.hubspot.net/hub/53/file-733888619-jpg/assets/hubspot.com/about/management/brian-home.jpg"
+    }
+%}
+{% end_dnd_module %}
+                 
+              {% dnd_module
+                path="@hubspot/rich_text",
+                offset=6,
+                width=6,
+              %}
+                {% module_attribute "html" %}
+                  <h1>But dogs rules</h1>
+                  <p>
+                    Whether we're watching our four-legged friends get the zoomies around the house or romp with their pals at the park, there's nothing that says "pure joy" like puppies at play. Those big floppy ears and goofy grins are the highlight of our days. So much so, that a 2017 study conducted by BarkBox found that the average dog owner posts about their pup six times per week on social media.
+                  </p>
+                {% end_module_attribute %}
+              {% end_dnd_module %}
+
+
+      {% end_dnd_section %}
