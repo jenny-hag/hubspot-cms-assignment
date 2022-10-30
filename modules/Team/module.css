@@ -1,0 +1,33 @@
+body {
+  min-height: 100vh;
+}
+h1 {
+  color: #000
+}
+
+.col {
+  width: 25vw;
+  float: left;
+  border: 1px solid #c0c0c0;
+}
+
+.team {
+  width: 100vw;
+  display:inline;
+}
+
+/* < 900px = 2 columns */
+@media screen and (max-width: 898px) {
+ .col {
+    width: 48vw;
+    border:1px solid #ff0000;
+  }
+}
+
+/* >= 900px = 3 columns */
+@media screen and (min-width: 898px) {
+ .col {
+    width:30vw;
+    border:1px solid #00ff00;
+  }
+}
