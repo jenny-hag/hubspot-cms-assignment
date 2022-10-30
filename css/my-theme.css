@@ -1,0 +1,13 @@
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+body {
+  color: {{theme.text_color.color}};
+  background-color: {{theme.background_color.color}};
+}
